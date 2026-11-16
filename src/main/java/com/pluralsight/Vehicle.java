@@ -1,17 +1,21 @@
 package com.pluralsight;
 
-public enum Vehicle {
-    Moped,
-    SemiTruck,
-    Hovercraft,
-    Car;
-
+public class Vehicle {
     private String color;
     private int numberOFPassengers;
     private int cargoCapacity;
     private int fuelCapacity;
     private int maxSpeed;
     private boolean requiresHelmet;
+
+    private enum VehicleType {
+        Moped,
+        SemiTruck,
+        Hovercraft,
+        Car;
+    }
+
+    private VehicleType type;
 
     public String getColor() {
         return color;
